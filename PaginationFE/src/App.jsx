@@ -1,14 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import FollowerList from './FollowerList';
 
-import "./index.css";
+
+import './index.css';
+
 
 const App = () => (
-  <div className="container">
-    <div>Name: PaginationFE</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
+  <>
+  <FollowerList/>
+  </>
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('app'),
+);
