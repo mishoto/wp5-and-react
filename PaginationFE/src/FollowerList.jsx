@@ -14,9 +14,14 @@ const FollowerList = () => {
   };
 
   useEffect(() => {
+    if(loading){
+      return
+    }
     setUsers(data[page]);
     
-  }, [page]);
+  }, [loading,page]);
+
+  
 
   
 
@@ -39,15 +44,6 @@ const FollowerList = () => {
     }
   };
 
-  const test = ()=>{
-    data.map((item, index)=>{
-      console.log(item[index]);
-    })
-  }
-
-  test();
-
-
   return (
     <main>
       <div className='section-title'>
@@ -55,11 +51,11 @@ const FollowerList = () => {
         <div className='underline'></div>
         <section className='followers'>
           <div className='container'>
-            {data.map((user, index) => (
+            {users.map((user, index) => (
               
                 
             
-                  <Follower key={user[index]} {...user[index]} />
+                  <Follower key={user.id} {...user} />
                 
               
             ))}
