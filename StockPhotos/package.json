@@ -6,7 +6,7 @@
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && npx serve -l 3006",
     "start": "webpack serve --open --mode development",
-    "start:live": "webpack serve --open --mode development --live-reload --hot"
+    "start:live": "webpack serve --open --mode development --env development --live-reload --hot"
   },
   "author": {
     "name": "Mihail Mihailov",
@@ -20,6 +20,7 @@
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.3.0",
+    "dotenv-webpack": "^8.0.0",
     "html-webpack-plugin": "^5.3.2",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
+    "dotenv": "^16.0.1",
     "file-loader": "^6.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
