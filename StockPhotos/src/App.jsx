@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PhotosList from './components/PhotosList';
 
+
 import './index.css';
 
 const App = () => (
@@ -11,4 +12,9 @@ const App = () => (
     </div>
   </>
 );
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('app'),
+);
